@@ -1,0 +1,30 @@
+# BulldozerSystem Python Launcher Dependencies
+
+# Core GUI and Web
+pywebview>=4.0.0
+# tkinter is built-in to Python, no separate install needed
+
+# Cryptography and Security
+cryptography>=41.0.0
+
+# Windows-specific dependencies
+pywin32>=306; sys_platform == "win32"
+WMI>=1.5.1; sys_platform == "win32"
+
+# System utilities
+psutil>=5.9.0
+requests>=2.31.0
+
+# Packaging and distribution
+pyinstaller>=5.13.0
+
+# Protection and obfuscation
+ast-unparse>=1.6.3; python_version < "3.9"
+
+# Optional: Development and debugging
+colorama>=0.4.6
+
+# Protection tool integration (optional)
+# Note: These tools need to be installed separately
+# UPX: Download from https://upx.github.io/
+# VMProtect: Commercial tool from https://vmpsoft.com/

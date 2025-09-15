@@ -1,0 +1,427 @@
+/* ===== MODERN FUTURISTIC LANDING PAGE ===== */
+
+/* ===== CSS VARIABLES (DESIGN SYSTEM) ===== */
+:root {
+  /* Primary Colors */
+  --color-primary: #00d4ff;
+  --color-primary-dark: #0099cc;
+  --color-primary-light: #66e5ff;
+  
+  /* Secondary Colors */
+  --color-secondary: #6c5ce7;
+  --color-secondary-dark: #5b4cdb;
+  --color-secondary-light: #a29bfe;
+  
+  /* Accent Colors */
+  --color-accent: #fd79a8;
+  --color-accent-secondary: #fdcb6e;
+  --color-success: #00b894;
+  --color-warning: #e17055;
+  --color-danger: #e84393;
+  
+  /* Neutral Colors */
+  --color-white: #ffffff;
+  --color-light: #f8f9fa;
+  --color-gray-100: #f1f3f4;
+  --color-gray-200: #e1e5e9;
+  --color-gray-300: #d1d7db;
+  --color-gray-400: #9aa0a6;
+  --color-gray-500: #5f6368;
+  --color-gray-600: #3c4043;
+  --color-gray-700: #202124;
+  --color-gray-800: #1a1a1a;
+  --color-gray-900: #0d1117;
+  --color-black: #000000;
+  
+  /* Background Gradients */
+  --bg-gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --bg-gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  --bg-gradient-dark: linear-gradient(135deg, #0c0c0c 0%, #1a1a2e 50%, #16213e 100%);
+  --bg-gradient-neon: linear-gradient(135deg, #00d4ff 0%, #6c5ce7 50%, #fd79a8 100%);
+  
+  /* Typography */
+  --font-family-primary: 'Inter', 'Cairo', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-family-secondary: 'JetBrains Mono', 'Courier New', monospace;
+  --font-family-arabic: 'Cairo', 'Tajawal', 'Amiri', sans-serif;
+  
+  /* Font Weights */
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+  --font-weight-black: 900;
+  
+  /* Font Sizes */
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --font-size-4xl: 2.25rem;
+  --font-size-5xl: 3rem;
+  --font-size-6xl: 3.75rem;
+  --font-size-7xl: 4.5rem;
+  --font-size-8xl: 6rem;
+  --font-size-9xl: 8rem;
+  
+  /* Spacing */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+  --space-32: 8rem;
+  --space-40: 10rem;
+  --space-48: 12rem;
+  
+  /* Border Radius */
+  --border-radius-sm: 0.25rem;
+  --border-radius-md: 0.5rem;
+  --border-radius-lg: 0.75rem;
+  --border-radius-xl: 1rem;
+  --border-radius-2xl: 1.5rem;
+  --border-radius-3xl: 2rem;
+  --border-radius-full: 9999px;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  --shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+  
+  /* Neon/Glow Effects */
+  --glow-primary: 0 0 20px rgba(0, 212, 255, 0.5), 0 0 40px rgba(0, 212, 255, 0.3), 0 0 80px rgba(0, 212, 255, 0.1);
+  --glow-secondary: 0 0 20px rgba(108, 92, 231, 0.5), 0 0 40px rgba(108, 92, 231, 0.3), 0 0 80px rgba(108, 92, 231, 0.1);
+  --glow-accent: 0 0 20px rgba(253, 121, 168, 0.5), 0 0 40px rgba(253, 121, 168, 0.3), 0 0 80px rgba(253, 121, 168, 0.1);
+  
+  /* Transitions */
+  --transition-fast: all 0.15s ease-in-out;
+  --transition-normal: all 0.3s ease-in-out;
+  --transition-slow: all 0.5s ease-in-out;
+  --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  
+  /* Z-index levels */
+  --z-dropdown: 1000;
+  --z-sticky: 1020;
+  --z-fixed: 1030;
+  --z-modal-backdrop: 1040;
+  --z-modal: 1050;
+  --z-popover: 1060;
+  --z-tooltip: 1070;
+  --z-toast: 1080;
+}
+
+/* ===== RESET & BASE STYLES ===== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--space-20);
+}
+
+body {
+  font-family: var(--font-family-primary);
+  font-weight: var(--font-weight-regular);
+  line-height: 1.6;
+  color: var(--color-white);
+  background: var(--bg-gradient-dark);
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Arabic text support */
+body[dir="rtl"] {
+  font-family: var(--font-family-arabic);
+}
+
+/* ===== ANIMATIONS & KEYFRAMES ===== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes neonPulse {
+  0%, 100% {
+    box-shadow: var(--glow-primary);
+    border-color: var(--color-primary);
+  }
+  50% {
+    box-shadow: var(--glow-secondary);
+    border-color: var(--color-secondary);
+  }
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes textGlow {
+  0%, 100% {
+    text-shadow: 0 0 10px var(--color-primary), 0 0 20px var(--color-primary), 0 0 30px var(--color-primary);
+  }
+  50% {
+    text-shadow: 0 0 15px var(--color-secondary), 0 0 25px var(--color-secondary), 0 0 35px var(--color-secondary);
+  }
+}
+
+/* Particle animation */
+@keyframes particle-float {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px) rotate(0deg);
+    opacity: 1;
+  }
+  25% {
+    transform: translateY(-100px) translateX(50px) rotate(90deg);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(-200px) translateX(-30px) rotate(180deg);
+    opacity: 0.6;
+  }
+  75% {
+    transform: translateY(-100px) translateX(-80px) rotate(270deg);
+    opacity: 0.8;
+  }
+}
+
+/* ===== UTILITY CLASSES ===== */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-4);
+}
+
+.container-fluid {
+  width: 100%;
+  padding: 0 var(--space-4);
+}
+
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+.d-none { display: none; }
+.d-block { display: block; }
+.d-inline { display: inline; }
+.d-inline-block { display: inline-block; }
+.d-flex { display: flex; }
+.d-grid { display: grid; }
+
+.justify-center { justify-content: center; }
+.justify-between { justify-content: space-between; }
+.justify-around { justify-content: space-around; }
+.justify-evenly { justify-content: space-evenly; }
+
+.items-center { align-items: center; }
+.items-start { align-items: flex-start; }
+.items-end { align-items: flex-end; }
+
+.flex-col { flex-direction: column; }
+.flex-row { flex-direction: row; }
+
+.w-full { width: 100%; }
+.h-full { height: 100%; }
+.h-screen { height: 100vh; }
+
+.relative { position: relative; }
+.absolute { position: absolute; }
+.fixed { position: fixed; }
+
+.z-10 { z-index: 10; }
+.z-20 { z-index: 20; }
+.z-30 { z-index: 30; }
+.z-40 { z-index: 40; }
+.z-50 { z-index: 50; }
+
+/* Margin utilities */
+.m-auto { margin: auto; }
+.mt-auto { margin-top: auto; }
+.mb-auto { margin-bottom: auto; }
+
+/* Animation utilities */
+.animate-fadeInUp { animation: fadeInUp 0.6s ease-out; }
+.animate-fadeInDown { animation: fadeInDown 0.6s ease-out; }
+.animate-fadeInLeft { animation: fadeInLeft 0.6s ease-out; }
+.animate-fadeInRight { animation: fadeInRight 0.6s ease-out; }
+.animate-scaleIn { animation: scaleIn 0.5s ease-out; }
+.animate-pulse { animation: pulse 2s infinite; }
+.animate-float { animation: float 3s ease-in-out infinite; }
+.animate-rotate { animation: rotate 20s linear infinite; }
+.animate-neonPulse { animation: neonPulse 3s ease-in-out infinite; }
+.animate-gradientShift { animation: gradientShift 8s ease infinite; }
+.animate-textGlow { animation: textGlow 2s ease-in-out infinite; }
+
+/* Delay utilities */
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-500 { animation-delay: 0.5s; }
+
+/* ===== BACKGROUND EFFECTS ===== */
+.bg-animated {
+  background: var(--bg-gradient-neon);
+  background-size: 400% 400%;
+  animation: gradientShift 8s ease infinite;
+}
+
+.particles-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.particle {
+  position: absolute;
+  background: var(--color-primary);
+  border-radius: 50%;
+  pointer-events: none;
+  animation: particle-float 15s infinite linear;
+}
+
+.particle:nth-child(1) { width: 4px; height: 4px; left: 10%; animation-delay: 0s; }
+.particle:nth-child(2) { width: 6px; height: 6px; left: 20%; animation-delay: 2s; }
+.particle:nth-child(3) { width: 3px; height: 3px; left: 30%; animation-delay: 4s; }
+.particle:nth-child(4) { width: 5px; height: 5px; left: 40%; animation-delay: 6s; }
+.particle:nth-child(5) { width: 4px; height: 4px; left: 50%; animation-delay: 8s; }
+.particle:nth-child(6) { width: 7px; height: 7px; left: 60%; animation-delay: 10s; }
+.particle:nth-child(7) { width: 3px; height: 3px; left: 70%; animation-delay: 12s; }
+.particle:nth-child(8) { width: 5px; height: 5px; left: 80%; animation-delay: 14s; }
+.particle:nth-child(9) { width: 4px; height: 4px; left: 90%; animation-delay: 16s; }
+.particle:nth-child(10) { width: 6px; height: 6px; left: 95%; animation-delay: 18s; }
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 var(--space-3);
+  }
+  
+  :root {
+    --font-size-7xl: 3rem;
+    --font-size-6xl: 2.5rem;
+    --font-size-5xl: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 var(--space-2);
+  }
+  
+  :root {
+    --font-size-7xl: 2.5rem;
+    --font-size-6xl: 2rem;
+    --font-size-5xl: 1.5rem;
+  }
+}
+

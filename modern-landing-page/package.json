@@ -1,0 +1,28 @@
+{
+  "name": "bulldozer-modern-landing",
+  "version": "1.0.0",
+  "description": "Modern futuristic landing page for Bulldozer POS system",
+  "main": "index.html",
+  "scripts": {
+    "dev": "live-server --port=3000 --open=index.html",
+    "build": "npm run minify-css && npm run minify-js",
+    "minify-css": "cleancss -o css/style.min.css css/style.css",
+    "minify-js": "uglifyjs js/main.js -o js/main.min.js"
+  },
+  "keywords": ["landing", "page", "modern", "futuristic", "pos", "bulldozer"],
+  "author": "Bulldozer Team",
+  "license": "MIT",
+  "dependencies": {
+    "gsap": "^3.12.2",
+    "three": "^0.157.0",
+    "lottie-web": "^5.12.2",
+    "aos": "^2.3.4",
+    "particles.js": "^2.0.0"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "clean-css-cli": "^5.6.2",
+    "uglify-js": "^3.17.4"
+  }
+}
+

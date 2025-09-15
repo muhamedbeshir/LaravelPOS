@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="نظام نقاط البيع المتقدم - البلدوزر. حل متكامل وحديث لإدارة المبيعات والمخزون والعملاء بتقنيات مستقبلية">
+    <meta name="keywords" content="نقاط البيع, POS, إدارة المبيعات, المخزون, العملاء, البلدوزر, نظام متقدم">
+    <meta name="author" content="Bulldozer Team">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="البلدوزر - نظام نقاط البيع المتقدم">
+    <meta property="og:description" content="حل متكامل وحديث لإدارة المبيعات والمخزون والعملاء بتقنيات مستقبلية">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://bulldozer-pos.com">
+    <meta property="og:image" content="./images/og-image.jpg">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="البلدوزر - نظام نقاط البيع المتقدم">
+    <meta name="twitter:description" content="حل متكامل وحديث لإدارة المبيعات والمخزون والعملاء بتقنيات مستقبلية">
+    <meta name="twitter:image" content="./images/og-image.jpg">
+    
+    <title>البلدوزر - نظام نقاط البيع المتقدم</title>
+    
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="./images/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="./images/apple-touch-icon.png">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/components.css">
+    <link rel="stylesheet" href="./css/sections.css">
+    
+    <!-- AOS Animation Library -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "البلدوزر - نظام نقاط البيع",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web",
+        "description": "نظام نقاط البيع المتقدم والمتكامل لإدارة المبيعات والمخزون والعملاء",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "creator": {
+            "@type": "Organization",
+            "name": "Bulldozer Team"
+        }
+    }
+    </script>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-content">
+            <div class="loader-container">
+                <div class="loader"></div>
+                <div class="loader-glow"></div>
+            </div>
+            <h2 class="loading-text animate-textGlow">البلدوزر</h2>
+            <p class="loading-subtitle">جارٍ التحميل...</p>
+            <div class="loading-progress">
+                <div class="progress-bar"></div>
+            </div>
+        </div>
+        <div class="particles-bg">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
+    </div>
+
+    <!-- Cursor Follower -->
+    <div id="cursor-follower" class="cursor-follower"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="nav-brand">
+                    <div class="brand-logo">
+                        <i class="fas fa-bulldozer"></i>
+                    </div>
+                    <span class="brand-text">البلدوزر</span>
+                </div>
+                
+                <div class="nav-menu" id="nav-menu">
+                    <a href="#home" class="nav-link active" data-section="home">
+                        <i class="fas fa-home"></i>
+                        <span>الرئيسية</span>
+                    </a>
+                    <a href="#features" class="nav-link" data-section="features">
+                        <i class="fas fa-star"></i>
+                        <span>المميزات</span>
+                    </a>
+                    <a href="#services" class="nav-link" data-section="services">
+                        <i class="fas fa-cogs"></i>
+                        <span>الخدمات</span>
+                    </a>
+                    <a href="#demo" class="nav-link" data-section="demo">
+                        <i class="fas fa-play-circle"></i>
+                        <span>عرض توضيحي</span>
+                    </a>
+                    <a href="#contact" class="nav-link" data-section="contact">
+                        <i class="fas fa-envelope"></i>
+                        <span>اتصل بنا</span>
+                    </a>
+                </div>
+                
+                <div class="nav-actions">
+                    <button class="btn btn-outline">تسجيل الدخول</button>
+                    <button class="btn btn-primary">تجربة مجانية</button>
+                    <button class="nav-toggle" id="nav-toggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="particles-bg">
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+            </div>
+            
+            <div class="hero-background">
+                <div class="hero-gradient"></div>
+                <div class="hero-shapes">
+                    <div class="shape shape-1 animate-float"></div>
+                    <div class="shape shape-2 animate-float delay-200"></div>
+                    <div class="shape shape-3 animate-float delay-400"></div>
+                </div>
+            </div>
+            
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text" data-aos="fade-up" data-aos-duration="1000">
+                        <h1 class="hero-title">
+                            <span class="title-highlight animate-textGlow">البلدوزر</span>
+                            <span class="title-main">نظام نقاط البيع المستقبلي</span>
+                        </h1>
+                        <p class="hero-subtitle" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                            تجربة جديدة في إدارة الأعمال مع تقنيات الذكاء الاصطناعي والواقع المعزز
+                            لنقلة نوعية في عالم التجارة الإلكترونية والمبيعات
+                        </p>
+                        <div class="hero-stats" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                            <div class="stat-item">
+                                <div class="stat-number" data-count="10000">0</div>
+                                <div class="stat-label">عميل سعيد</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number" data-count="99.9">0</div>
+                                <div class="stat-label">% وقت التشغيل</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number" data-count="24">0</div>
+                                <div class="stat-label">دعم فني</div>
+                            </div>
+                        </div>
+                        <div class="hero-actions" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
+                            <button class="btn btn-primary btn-lg pulse-on-hover">
+                                <i class="fas fa-rocket"></i>
+                                ابدأ رحلتك الآن
+                            </button>
+                            <button class="btn btn-outline btn-lg">
+                                <i class="fas fa-play"></i>
+                                شاهد العرض التوضيحي
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-visual" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300">
+                        <div class="device-mockup">
+                            <div class="device-screen">
+                                <div class="screen-content">
+                                    <!-- Interactive Demo Content -->
+                                    <div class="demo-dashboard">
+                                        <div class="demo-header">
+                                            <div class="demo-logo">
+                                                <i class="fas fa-bulldozer"></i>
+                                            </div>
+                                            <div class="demo-stats">
+                                                <div class="stat">
+                                                    <span class="value">₪ 45,230</span>
+                                                    <span class="label">مبيعات اليوم</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="demo-chart">
+                                            <div class="chart-bars">
+                                                <div class="bar" style="height: 60%"></div>
+                                                <div class="bar" style="height: 80%"></div>
+                                                <div class="bar" style="height: 45%"></div>
+                                                <div class="bar" style="height: 90%"></div>
+                                                <div class="bar" style="height: 70%"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="device-glow"></div>
+                        </div>
+                        <div class="floating-elements">
+                            <div class="floating-card card-1 animate-float">
+                                <i class="fas fa-chart-line"></i>
+                                <span>تحليلات متقدمة</span>
+                            </div>
+                            <div class="floating-card card-2 animate-float delay-300">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>أمان عالي</span>
+                            </div>
+                            <div class="floating-card card-3 animate-float delay-500">
+                                <i class="fas fa-cloud"></i>
+                                <span>تزامن سحابي</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Scroll Indicator -->
+            <div class="scroll-indicator" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1000">
+                <div class="scroll-icon">
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <span class="scroll-text">اكتشف المزيد</span>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="features-section">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <h2 class="section-title">مميزات استثنائية</h2>
+                    <p class="section-subtitle">
+                        تقنيات متطورة ومميزات فريدة تجعل من البلدوزر الخيار الأمثل لنجاح أعمالك
+                    </p>
+                </div>
+                
+                <div class="features-grid">
+                    <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="feature-icon">
+                            <i class="fas fa-brain"></i>
+                            <div class="icon-glow"></div>
+                        </div>
+                        <h3 class="feature-title">ذكاء اصطناعي متقدم</h3>
+                        <p class="feature-description">
+                            خوارزميات ذكية لتحليل البيانات والتنبؤ بالمبيعات وتحسين الأداء
+                        </p>
+                        <div class="feature-tech">
+                            <span class="tech-badge">ML</span>
+                            <span class="tech-badge">AI</span>
+                            <span class="tech-badge">Analytics</span>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="feature-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                            <div class="icon-glow"></div>
+                        </div>
+                        <h3 class="feature-title">واجهة تفاعلية مبتكرة</h3>
+                        <p class="feature-description">
+                            تصميم عصري وسهل الاستخدام مع دعم اللمس المتعدد والإيماءات الذكية
+                        </p>
+                        <div class="feature-tech">
+                            <span class="tech-badge">PWA</span>
+                            <span class="tech-badge">Touch</span>
+                            <span class="tech-badge">AR</span>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-virus"></i>
+                            <div class="icon-glow"></div>
+                        </div>
+                        <h3 class="feature-title">حماية متقدمة</h3>
+                        <p class="feature-description">
+                            تشفير من الدرجة العسكرية ونظام مصادقة متعدد المراحل لحماية بياناتك
+                        </p>
+                        <div class="feature-tech">
+                            <span class="tech-badge">AES-256</span>
+                            <span class="tech-badge">2FA</span>
+                            <span class="tech-badge">Blockchain</span>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="feature-icon">
+                            <i class="fas fa-rocket"></i>
+                            <div class="icon-glow"></div>
+                        </div>
+                        <h3 class="feature-title">أداء فائق السرعة</h3>
+                        <p class="feature-description">
+                            معالجة فورية للمعاملات وتحديثات في الوقت الفعلي لتجربة سلسة
+                        </p>
+                        <div class="feature-tech">
+                            <span class="tech-badge">WebRTC</span>
+                            <span class="tech-badge">CDN</span>
+                            <span class="tech-badge">Cache</span>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-card" data-aos="fade-up" data-aos-delay="500">
+                        <div class="feature-icon">
+                            <i class="fas fa-globe"></i>
+                            <div class="icon-glow"></div>
+                        </div>
+                        <h3 class="feature-title">دعم متعدد اللغات</h3>
+                        <p class="feature-description">
+                            واجهة بأكثر من 20 لغة مع دعم كامل للكتابة من اليمين إلى اليسار
+                        </p>
+                        <div class="feature-tech">
+                            <span class="tech-badge">i18n</span>
+                            <span class="tech-badge">RTL</span>
+                            <span class="tech-badge">Unicode</span>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-card" data-aos="fade-up" data-aos-delay="600">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-pie"></i>
+                            <div class="icon-glow"></div>
+                        </div>
+                        <h3 class="feature-title">تقارير ذكية</h3>
+                        <p class="feature-description">
+                            لوحات تحكم تفاعلية وتقارير متقدمة مع الرسوم البيانية ثلاثية الأبعاد
+                        </p>
+                        <div class="feature-tech">
+                            <span class="tech-badge">3D Charts</span>
+                            <span class="tech-badge">BI</span>
+                            <span class="tech-badge">Export</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services-section">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <h2 class="section-title">خدماتنا المتميزة</h2>
+                    <p class="section-subtitle">
+                        حلول شاملة ومتكاملة لجميع احتياجات أعمالك التجارية
+                    </p>
+                </div>
+                
+                <div class="services-grid">
+                    <div class="service-item" data-aos="fade-right" data-aos-delay="100">
+                        <div class="service-image">
+                            <div class="image-placeholder">
+                                <i class="fas fa-cash-register"></i>
+                            </div>
+                            <div class="image-overlay"></div>
+                        </div>
+                        <div class="service-content">
+                            <h3 class="service-title">نقاط البيع الذكية</h3>
+                            <p class="service-description">
+                                نظام متطور لنقاط البيع يدعم جميع وسائل الدفع الحديثة والتقليدية
+                            </p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check"></i> دعم المدفوعات اللاتلامسية</li>
+                                <li><i class="fas fa-check"></i> إدارة المخزون الآلي</li>
+                                <li><i class="fas fa-check"></i> فواتير إلكترونية فورية</li>
+                            </ul>
+                            <button class="btn btn-outline">اعرف المزيد</button>
+                        </div>
+                    </div>
+                    
+                    <div class="service-item" data-aos="fade-left" data-aos-delay="200">
+                        <div class="service-content">
+                            <h3 class="service-title">إدارة العملاء الذكية</h3>
+                            <p class="service-description">
+                                نظام CRM متقدم لإدارة علاقات العملاء وبرامج الولاء
+                            </p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check"></i> ملفات عملاء تفصيلية</li>
+                                <li><i class="fas fa-check"></i> برامج ولاء مخصصة</li>
+                                <li><i class="fas fa-check"></i> تحليل سلوك المستهلك</li>
+                            </ul>
+                            <button class="btn btn-outline">اعرف المزيد</button>
+                        </div>
+                        <div class="service-image">
+                            <div class="image-placeholder">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="image-overlay"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="service-item" data-aos="fade-right" data-aos-delay="300">
+                        <div class="service-image">
+                            <div class="image-placeholder">
+                                <i class="fas fa-warehouse"></i>
+                            </div>
+                            <div class="image-overlay"></div>
+                        </div>
+                        <div class="service-content">
+                            <h3 class="service-title">إدارة المخزون المتقدمة</h3>
+                            <p class="service-description">
+                                نظام ذكي لإدارة المخزون مع تتبع في الوقت الفعلي وتنبيهات ذكية
+                            </p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check"></i> تتبع المخزون بالباركود</li>
+                                <li><i class="fas fa-check"></i> تنبيهات نفاد المخزون</li>
+                                <li><i class="fas fa-check"></i> تحليل حركة البضائع</li>
+                            </ul>
+                            <button class="btn btn-outline">اعرف المزيد</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Demo Section -->
+        <section id="demo" class="demo-section">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <h2 class="section-title">شاهد النظام بالعمل</h2>
+                    <p class="section-subtitle">
+                        تجربة تفاعلية مباشرة لاستكشاف جميع مميزات النظام
+                    </p>
+                </div>
+                
+                <div class="demo-container" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="demo-video">
+                        <div class="video-placeholder">
+                            <div class="play-button">
+                                <i class="fas fa-play"></i>
+                            </div>
+                            <div class="video-overlay"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="demo-controls">
+                        <button class="demo-btn active" data-demo="pos">
+                            <i class="fas fa-cash-register"></i>
+                            نقطة البيع
+                        </button>
+                        <button class="demo-btn" data-demo="inventory">
+                            <i class="fas fa-boxes"></i>
+                            المخزون
+                        </button>
+                        <button class="demo-btn" data-demo="reports">
+                            <i class="fas fa-chart-bar"></i>
+                            التقارير
+                        </button>
+                        <button class="demo-btn" data-demo="customers">
+                            <i class="fas fa-users"></i>
+                            العملاء
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <h2 class="section-title">ابدأ رحلتك معنا</h2>
+                    <p class="section-subtitle">
+                        تواصل معنا اليوم واحصل على استشارة مجانية
+                    </p>
+                </div>
+                
+                <div class="contact-content">
+                    <div class="contact-info" data-aos="fade-right" data-aos-delay="200">
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <h3>اتصل بنا</h3>
+                            <p>+972 59-123-4567</p>
+                            <p>+972 50-765-4321</p>
+                        </div>
+                        
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <h3>راسلنا</h3>
+                            <p>info@bulldozer-pos.com</p>
+                            <p>support@bulldozer-pos.com</p>
+                        </div>
+                        
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <h3>زرنا</h3>
+                            <p>فلسطين، رام الله</p>
+                            <p>شارع الإرسال، مجمع فلسطين</p>
+                        </div>
+                    </div>
+                    
+                    <form class="contact-form" data-aos="fade-left" data-aos-delay="300">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" required>
+                            <label for="name">الاسم الكامل</label>
+                            <div class="form-line"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" required>
+                            <label for="email">البريد الإلكتروني</label>
+                            <div class="form-line"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="tel" id="phone" name="phone" required>
+                            <label for="phone">رقم الهاتف</label>
+                            <div class="form-line"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                            <label for="message">رسالتك</label>
+                            <div class="form-line"></div>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-lg">
+                            <i class="fas fa-paper-plane"></i>
+                            إرسال الرسالة
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand" data-aos="fade-up">
+                    <div class="brand-logo">
+                        <i class="fas fa-bulldozer"></i>
+                    </div>
+                    <h3>البلدوزر</h3>
+                    <p>نظام نقاط البيع المستقبلي الذي يحول أحلامك التجارية إلى واقع رقمي متقدم</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links" data-aos="fade-up" data-aos-delay="100">
+                    <h4>الخدمات</h4>
+                    <ul>
+                        <li><a href="#">نقاط البيع</a></li>
+                        <li><a href="#">إدارة المخزون</a></li>
+                        <li><a href="#">إدارة العملاء</a></li>
+                        <li><a href="#">التقارير والتحليلات</a></li>
+                        <li><a href="#">الدعم الفني</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links" data-aos="fade-up" data-aos-delay="200">
+                    <h4>الشركة</h4>
+                    <ul>
+                        <li><a href="#">من نحن</a></li>
+                        <li><a href="#">فريق العمل</a></li>
+                        <li><a href="#">الأخبار</a></li>
+                        <li><a href="#">المدونة</a></li>
+                        <li><a href="#">الوظائف</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links" data-aos="fade-up" data-aos-delay="300">
+                    <h4>الدعم</h4>
+                    <ul>
+                        <li><a href="#">مركز المساعدة</a></li>
+                        <li><a href="#">الدليل الشامل</a></li>
+                        <li><a href="#">الدورات التدريبية</a></li>
+                        <li><a href="#">اتصل بنا</a></li>
+                        <li><a href="#">تذاكر الدعم</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-newsletter" data-aos="fade-up" data-aos-delay="400">
+                    <h4>اشترك في النشرة</h4>
+                    <p>احصل على آخر الأخبار والتحديثات</p>
+                    <form class="newsletter-form">
+                        <div class="input-group">
+                            <input type="email" placeholder="بريدك الإلكتروني" required>
+                            <button type="submit">
+                                <i class="fas fa-arrow-left"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom" data-aos="fade-up" data-aos-delay="500">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2024 البلدوزر. جميع الحقوق محفوظة.</p>
+                    <div class="footer-legal">
+                        <a href="#">سياسة الخصوصية</a>
+                        <a href="#">شروط الاستخدام</a>
+                        <a href="#">ملفات تعريف الارتباط</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top" aria-label="العودة إلى الأعلى">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/animations.js"></script>
+    <script src="./js/effects.js"></script>
+</body>
+</html>
+

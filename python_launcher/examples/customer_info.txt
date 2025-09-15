@@ -1,0 +1,16 @@
+BulldozerSystem Customer Information
+=====================================
+
+Customer UUID: PF1XE23C
+
+Instructions:
+1. Copy the Customer UUID above
+2. Send it to your software provider
+3. You will receive an activation code
+4. Enter the activation code when prompted by the software
+
+System Information:
+- Generated on: get_customer_uuid.py
+- Please keep this file for your records
+
+Contact your software provider if you need assistance.

@@ -1,0 +1,9 @@
+{
+  "app_name": "BulldozerSystem",
+  "window_title": "BulldozerSystem",
+  "window_width": 1200,
+  "window_height": 800,
+  "debug_mode": false,
+  "auto_start_server": true,
+  "default_port": 8000
+}
